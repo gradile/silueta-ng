@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container">
+    <div class="card" *ngFor="let customer of customers">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Customer name</label>
+                    <mat-card-content>{{customer.first_name}}&nbsp;{{customer.last_name}}</mat-card-content>
+                </div>
+                <div class="col-md-4">
+                    <label>Address</label>
+                    <mat-card-content>{{customer.street}}</mat-card-content>
+                </div>  
+                <div class="col-md-2">
+                    <label>City</label>
+                    <mat-card-content>{{customer.city}}</mat-card-content>
+                </div>   
+                <div class="col-md-2">
+                    <label>Zip code</label>
+                    <mat-card-content>{{customer.zip_code}}</mat-card-content>
+                </div>   
+               
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Customer phone</label>
+                    <mat-card-content>{{customer.phone}}</mat-card-content>
+                </div>
+                <div class="col-md-3">
+                    <label>Delivery date</label>
+                    <mat-card-content>{{customer.delivery_date | date: 'MM/dd/yyyy'}}</mat-card-content>
+                </div>   
+                <div class="col-md-3">
+                    <label>Price</label>
+                    <mat-card-content>{{customer.price | currency}}</mat-card-content>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
